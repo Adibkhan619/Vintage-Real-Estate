@@ -1,0 +1,166 @@
+[
+      {
+        "img": "https://i.ibb.co/t2F6QvT/family-Home2.jpg",
+        "site_title": "Sunset Valley Estates",
+        "id": "SV001",
+        "segment_name": "Luxury Homes",
+        "description": "Beautiful single-family homes with modern amenities and scenic views.",
+        "price": "$800,000",
+        "status": "sale",
+        "total_area": "3,000 sqft",
+        "location": "Sunset Valley, CA",
+        "facilities": ["Swimming pool", "Tennis court", "Gym"],
+        "category" : "single family home"
+      },
+      {
+        "img": "https://i.ibb.co/b3VnN8M/family-Home1.jpg",
+        "site_title": "Oakridge Meadows",
+        "id": "OM002",
+        "segment_name": "Family Homes",
+        "description": "Cozy family homes surrounded by nature and close to schools and parks.",
+        "price": "$500,000",
+        "status": "sale",
+        "total_area": "2,200 sqft",
+        "location": "Oakridge, TX",
+        "facilities": ["Community playground", "Walking trails", "Fitness center"],
+        "category" : "single family home"
+      }
+    ,
+      {
+        "img": "https://i.ibb.co/tsKkwHm/town-House2.jpg",
+        "site_title": "Maplewood Townhomes",
+        "id": "MT003",
+        "segment_name": "Modern Townhomes",
+        "description": "Contemporary townhomes with spacious layouts and urban convenience.",
+        "price": "$600,000",
+        "status": "sale",
+        "total_area": "2,500 sqft",
+        "location": "Maplewood, NJ",
+        "facilities": ["Roof deck", "Garage parking", "Pet-friendly community"],
+        "category" : "town house"
+      },
+      {
+        "img": "https://i.ibb.co/vXxFTBR/town-House1.jpg",
+        "site_title": "Heritage Square",
+        "id": "HS004",
+        "segment_name": "Historic Townhomes",
+        "description": "Charming historic townhomes restored with modern comforts.",
+        "price": "$450,000",
+        "status": "sale",
+        "total_area": "2,000 sqft",
+        "location": "Heritage, VA",
+        "facilities": ["Gated community", "Community garden", "Fitness center"],
+        "category" : "town house"
+      },
+  
+      {
+        "img": "https://i.ibb.co/vcFFSpJ/appartment1.jpg",
+        "site_title": "City View Apartments",
+        "id": "CV005",
+        "segment_name": "Urban Living",
+        "description": "Stylish apartments with panoramic city views and luxury amenities.",
+        "price": "$2,500/month",
+        "status": "rent",
+        "total_area": "1,000 sqft",
+        "location": "Downtown, NY",
+        "facilities": ["Rooftop pool", "Concierge service", "Fitness center"],
+        "category" : "appartments"
+      },
+      {
+        "img": "https://i.ibb.co/M9fkx7g/appartment2.jpg",
+        "site_title": "Lakefront Towers",
+        "id": "LT006",
+        "segment_name": "Waterfront Living",
+        "description": "Upscale apartments overlooking the lake with resort-style amenities.",
+        "price": "$3,000/month",
+        "status": "rent",
+        "total_area": "1,200 sqft",
+        "location": "Lakeview, CA",
+        "facilities": ["Private balcony", "Boat dock access", "Yoga studio"],
+        "category" : "appartments"
+      },
+  
+      {
+        "img": "https://i.ibb.co/QKrpfdY/student-Housing1.jpg",
+        "site_title": "Campus Pointe",
+        "id": "CP007",
+        "segment_name": "Modern Student Living",
+        "description": "Fully furnished student apartments with easy access to campus and amenities.",
+        "price": "$800/month",
+        "status": "rent",
+        "total_area": "600 sqft",
+        "location": "University District, WA",
+        "facilities": ["Study lounge", "Game room", "Fitness center"],
+        "category" : "student housing"
+      },
+      {
+        "img": "https://i.ibb.co/g4PcKLY/student-Housing2.jpg",
+        "site_title": "Ivy League Residences",
+        "id": "IL008",
+        "segment_name": "Premier Student Housing",
+        "description": "Luxurious student housing with high-end finishes and academic support services.",
+        "price": "$1,200/month",
+        "status": "rent",
+        "total_area": "700 sqft",
+        "location": "University Heights, MA",
+        "facilities": ["24/7 security", "Computer lab", "Outdoor courtyard"],
+        "category" : "student housing"
+      },
+   
+      {
+        "img": "https://i.ibb.co/rdbWVX0/senior-Living-Communities2.jpg",
+        "site_title": "Golden Oaks Retirement Village",
+        "id": "GO009",
+        "segment_name": "Active Senior Living",
+        "description": "Retirement community offering independent living with social activities and wellness programs.",
+        "price": "$3,000/month",
+        "status": "rent",
+        "total_area": "800 sqft",
+        "location": "Golden Hills, FL",
+        "facilities": ["Community clubhouse", "Walking trails", "Fitness classes"],
+        "category" : "senior living communities"
+      },
+      {
+        "img": "https://i.ibb.co/6PsHBzj/senior-Living-Communities1.jpg",
+        "site_title": "Silver Pines Senior Residences",
+        "id": "SP010",
+        "segment_name": "Assisted Living",
+        "description": "Comfortable senior living with personalized care and support services.",
+        "price": "$4,500/month",
+        "status": "rent",
+        "total_area": "900 sqft",
+        "location": "Silver Springs, AZ",
+        "facilities": ["Medication management", "Memory care programs", "Restaurant-style dining"],
+        "category" : "senior living communities"
+      },
+    
+     
+      {
+        "img": "https://i.ibb.co/2y4J4Pk/vacation-Rentals1.jpg",
+        "site_title": "Seaside Retreats",
+        "id": "SR011",
+        "segment_name": "Beachfront Getaways",
+        "description": "Relaxing beachfront vacation homes with stunning ocean views and beach access.",
+        "price": "$300/night",
+        "status": "rent",
+        "total_area": "1,500 sqft",
+        "location": "Seaside, CA",
+        "facilities": ["Private beach access", "Outdoor BBQ area", "Oceanfront deck"],
+        "category" : "vacation rentals"
+      },
+      {
+        "img": "https://i.ibb.co/8j5d4gv/vaction-Rentals2.jpg",
+        "site_title": "Mountain Hideaways",
+        "id": "MH012",
+        "segment_name": "Scenic Mountain Retreats",
+        "description": "Cozy cabins nestled in the mountains with hiking trails and breathtaking views.",
+        "price": "$250/night",
+        "status": "rent",
+        "total_area": "1,200 sqft",
+        "location": "Mountain Valley, CO",
+        "facilities": ["Hot tub", "Fireplace", "Outdoor seating area"],
+        "category" : "vacation rentals"
+      }
+    
+    ]
+  
