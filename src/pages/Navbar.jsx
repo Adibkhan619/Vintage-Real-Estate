@@ -1,13 +1,25 @@
 
+import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import { AuthContext } from '../providers/AuthProvider';
 
 const Navbar = () => {
+const {user, logOut} = useContext(AuthContext);
 
+  const handleSignOut = () => {
+    logOut()
+    .then(result => {alert('Log out successful'), result})
+    .catch()
+  }
+
+  
     const navLinks = <>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/register">Register</NavLink></li>
         <li><NavLink to="/login">Login</NavLink></li>        
+        <li><NavLink to="/userProfile">Profile</NavLink></li>        
+        <li><NavLink to="/updateProfile">Update Profile</NavLink></li>        
     </>
     return (
         <div className='flex justify-center'>
@@ -29,7 +41,12 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Button</a>
+    {
+      user ? <button onClick={handleSignOut} className='btn'>Sign Out</button>
+      :
+      <NavLink to="/login"><button className='btn'>Login</button></NavLink>
+    }
+    
   </div>
 </div>
             
