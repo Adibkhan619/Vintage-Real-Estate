@@ -3,16 +3,19 @@ import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWith
 import app from "../firebase/firebase.config";
 
 
+
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
 
 const AuthProvider = ({children}) => {
-    const [user, setUser] = useState(null)
+    const [user, setUser] = useState(null);
+    const [userPhoto, setUserPhoto] = useState(null);
     const googleProvider = new GoogleAuthProvider();
 
     const createUser = (email, password) => {
-        return createUserWithEmailAndPassword(auth, email, password)
+        return createUserWithEmailAndPassword(auth, email, password)                       
     }
+
     const logIn = (email, password) => {
         return signInWithEmailAndPassword (auth, email, password)
     }
@@ -25,7 +28,6 @@ const AuthProvider = ({children}) => {
         return signInWithPopup(auth, googleProvider);
     }
     
-
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser=>{
             console.log('still not getting it', currentUser);
@@ -36,7 +38,6 @@ const AuthProvider = ({children}) => {
         }
     }, [])
 
-
     const authInfo = {
             user, 
             setUser,
@@ -44,6 +45,9 @@ const AuthProvider = ({children}) => {
             logIn,
             logOut,
             googleLogin,
+            googleProvider,
+            userPhoto, 
+            setUserPhoto,
     }
 
     return (

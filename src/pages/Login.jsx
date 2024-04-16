@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { Link } from "react-router-dom";
-// import { signInWithPopup, GoogleAuthProvider, getAuth } from "firebase/auth";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const { logIn, googleLogin } = useContext(AuthContext);
@@ -10,16 +11,16 @@ const Login = () => {
     e.preventDefault();
 
     const form = new FormData(e.currentTarget);
-    const name = form.get("name");
     const email = form.get("email");
-    const photo = form.get("photo");
     const password = form.get("password");
 
-    console.log(name, email, photo, password);
-
     logIn(email, password)
-      .then((result) => console.log(result.user, "i have logged in"))
-      .catch((error) => console.log(error));
+      .then((result) => {
+        toast("Login Successful !");
+        console.log(result.user);})
+      .catch((error) => {
+        toast("Invalid Email or Password");
+        console.log(error);});
   };
   const handleGoogleLogin = () => {
     googleLogin()
@@ -93,6 +94,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

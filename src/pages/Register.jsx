@@ -1,27 +1,32 @@
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
-import { Link } from "react-router-dom";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
 
-    const {createUser} = useContext(AuthContext);
+    const {createUser, setUserPhoto} = useContext(AuthContext);
 
     const handleRegister = e => {
         e.preventDefault();
 
-        const form = new FormData(e.currentTarget)
+        const form = new FormData(e.currentTarget);
         const name = form.get('name');
         const email = form.get('email');
         const photo = form.get('photo');
         const password = form.get('password');
 
+        setUserPhoto(photo);
+        
         // console.log(name, email, photo, password);
 
         // Create User
         createUser(email, password) 
-        .then(result => console.log(result.user))
+        .then(result => {toast("Registration Successful !");
+      console.log(result, "success");
+     })
         .catch(error => console.log(error))
+        
     }
 
     return (
@@ -62,13 +67,15 @@ const Register = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-            <Link to="/userProfile"><button type="submit" className="btn btn-primary w-full">Register</button></Link>
-          
+            <button type="submit" className="btn btn-primary w-full">Register</button>
+            
         </div>
       </form>
     </div>
   </div>
+
 </div>
+ <ToastContainer />
         </div>
     );
 };
