@@ -47,7 +47,7 @@ const Register = () => {
     return (
         <div>
             <div className="hero max-w-7xl rounded-3xl mx-auto h-[600px]  bg-gray-700">
-              <img className="hero-overlay h-[600px] rounded-3xl opacity-70" src="https://i.postimg.cc/sx5N613D/banner-final.jpg" alt="" />
+              <img className="hero-overlay h-[600px] rounded-3xl opacity-50" src="https://i.postimg.cc/sx5N613D/banner-final.jpg" alt="" />
   <div className="hero-content px-16 lg:gap-10 flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl text-white font-bold">Register Now!</h1>

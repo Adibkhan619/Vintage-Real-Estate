@@ -2,11 +2,11 @@
 const Home = () => {
 
   return (
-    <div className="">
-      <div className="hero max-w-7xl rounded-3xl mx-auto h-[600px]  bg-gray-700"> 
-  <div className="hero-overlay bg-opacity-50 rounded-3xl mx-auto ">
-  <img className="hero-overlay h-[600px] rounded-3xl opacity-70" src="https://i.postimg.cc/sx5N613D/banner-final.jpg" alt="" />
-  </div>
+    <div className="mt-8">
+      <div className="hero max-w-7xl rounded-3xl mx-auto h-[600px]  bg-gray-900"> 
+  
+  <img className="hero-overlay h-[600px] rounded-3xl opacity-50" src="https://i.postimg.cc/sx5N613D/banner-final.jpg" alt="" />
+  
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
       <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
