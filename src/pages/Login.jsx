@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
   const { logIn, googleLogin } = useContext(AuthContext);
 
-  const handleRegister = (e) => {
+  const handleLogin = (e) => {
     e.preventDefault();
 
     const form = new FormData(e.currentTarget);
@@ -43,7 +43,7 @@ const Login = () => {
             </p>
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={handleRegister} className="card-body">
+            <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>

@@ -41,6 +41,8 @@ const {user, logOut} = useContext(AuthContext);
     </ul>
   </div>
   <div className="navbar-end">
+
+    { user ? <p>{user.email}</p> : <p> hello</p>}
     {
       user ? <button onClick={handleSignOut} className='btn'>Sign Out</button>
       :

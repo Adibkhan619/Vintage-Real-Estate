@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 
@@ -17,7 +18,10 @@ const SiteCard = ({ site }) => {
           <h2 className="card-title">{site_title}</h2>
           <p>{description}</p>
           <div className="card-actions justify-end">
+            <Link to={`/siteDetails/${id}`}>
             <button className="btn btn-primary">Details</button>
+            </Link>
+            
           </div>
         </div>
       </div>
