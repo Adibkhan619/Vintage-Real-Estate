@@ -46,11 +46,12 @@ const Register = () => {
 
     return (
         <div>
-            <div className="hero  h-[500px]  bg-base-200">
-  <div className="hero-content lg:gap-10 flex-col lg:flex-row-reverse">
+            <div className="hero max-w-7xl rounded-3xl mx-auto h-[600px]  bg-gray-700">
+              <img className="hero-overlay h-[600px] rounded-3xl opacity-70" src="https://i.postimg.cc/sx5N613D/banner-final.jpg" alt="" />
+  <div className="hero-content px-16 lg:gap-10 flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
-      <h1 className="text-5xl font-bold">Register Now!</h1>
-      <p className="py-6">Unlock the gateway to unparalleled industrial opportunities by registering now on our website. Gain exclusive access to a diverse array of industrial complexes, from cutting-edge factories to state-of-the-art power plants.</p>
+      <h1 className="text-5xl text-white font-bold">Register Now!</h1>
+      <p className="py-6 text-white">Unlock the gateway to unparalleled industrial opportunities by registering now on our website. Gain exclusive access to a diverse array of industrial complexes, from cutting-edge factories to state-of-the-art power plants.</p>
     </div>
     <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
       <form onSubmit={handleRegister} className="card-body">
