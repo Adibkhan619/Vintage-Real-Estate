@@ -6,7 +6,7 @@ import { updateProfile } from "firebase/auth";
 
 const Register = () => {
 
-    const {createUser, setUserPhoto} = useContext(AuthContext);
+    const {createUser} = useContext(AuthContext);
 
     const handleRegister = e => {
         e.preventDefault();
@@ -17,7 +17,7 @@ const Register = () => {
         const photo = form.get('photo');
         const password = form.get('password');
 
-        setUserPhoto(photo);
+        
         
         // console.log(name, email, photo, password);
         // Create User
