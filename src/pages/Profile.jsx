@@ -7,17 +7,16 @@ const Profile = () => {
   return (
     <div>
       <div>
-        <img className="w-48" src={user.photoURL} alt="" />
-        <h1>Its profile</h1>
-      </div>
-
-      <div>
-        <div className="hero min-h-screen bg-base-200">
-          <div className="hero-content justify-center gap-24 flex-col lg:flex-row-reverse">
-            <div className="text-center lg:text-left">
-              <img className="w-1/2" src={user.photoURL} alt="" />
+        <div>
+          <h1 className="text-3xl">{user.displayName}</h1>
+          <p>socreteses</p>
+        </div>
+        {/* <div className="h-fit w-3/4 mx-auto rounded-3xl bg-base-200 ">
+          <div className="p-16 border rounded-3xl flex lg:flex-row-reverse mx-auto items-center justify-center gap-20  ">
+            <div className="">
+              <img className="w-96 h-96 rounded-full"  src={user.photoURL} alt="" />
             </div>
-            <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <div className="card w-full max-w-sm shadow-2xl bg-base-100">
               <form className="card-body">
                 <div className="form-control">
                   <label className="label">
@@ -52,7 +51,7 @@ const Profile = () => {
               </form>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

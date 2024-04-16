@@ -7,8 +7,15 @@ const Home = () => {
   console.log(realEstates);
 
   return (
-    <div>
-      {/* {realEstates.map(site => <li><img className="w-24" src={site.img} alt="" /></li>)} */}
+    <div className="mx-auto">
+   
+
+      
+
+
+
+
+
       <div>
         {realEstates.map(item => <SiteCard site={item} key={item.id}></SiteCard>)}
       </div>

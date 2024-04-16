@@ -5,7 +5,10 @@ const Root = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <Outlet></Outlet>         
+            <div className="max-w-screen-2xl px-24 flex justify-center mx-auto">
+                <Outlet></Outlet>    
+            </div>
+                 
         </div>
     );
 };

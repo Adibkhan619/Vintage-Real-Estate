@@ -1,12 +1,14 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { updateProfile } from "firebase/auth";
+import { Link } from "react-router-dom";
 
 const Register = () => {
 
     const {createUser} = useContext(AuthContext);
+    const [error, setError] = useState();
 
     const handleRegister = e => {
         e.preventDefault();
@@ -17,25 +19,29 @@ const Register = () => {
         const photo = form.get('photo');
         const password = form.get('password');
 
-        
-        
-        // console.log(name, email, photo, password);
+        if(password.length<6){
+          setError("Password must be at least 6 characters")
+          return
+        }
+        if(!/(?=.*[a-z])(?=.*[A-Z])/.test(password)){
+          setError("Password must have at least one uppercase and one lowercase letter.")
+          return
+        }
+        setError("")
+
         // Create User
         createUser(email, password) 
         .then(result => {toast("Registration Successful !");
-      console.log(result, "success");
+          console.log(result, "success");
+
         updateProfile(result.user, {
           displayName: name,
           photoURL: photo,
           })
           .then()
-          .catch()
-    
-    
+          .catch()   
     })
-       
-        .catch(error => console.log(error))
-        
+          .catch(error => console.log(error))       
     }
 
     return (
@@ -71,14 +77,18 @@ const Register = () => {
             <span className="label-text">Password</span>
           </label>
           <input type="password" name="password" placeholder="password" className="input input-bordered" required />
-          <label className="label">
-            <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-          </label>
+          <small className="text-red-600">{error}</small>
         </div>
         <div className="form-control mt-6">
             <button type="submit" className="btn btn-primary w-full">Register</button>
             
         </div>
+        <p>
+              <small>Already have an account?{" "}</small>
+              <Link to="/login" className="hover:text-blue-500">
+                <small><strong>Login</strong></small>
+              </Link>
+            </p>
       </form>
     </div>
   </div>

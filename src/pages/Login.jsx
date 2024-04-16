@@ -93,16 +93,21 @@ const Login = () => {
                 </button>
               </div>
            </form>
-            <div>
+            <div className="px-8 mb-8">
               <button className="btn btn-primary" onClick={handleGoogleLogin}>Google</button>
               <button className="btn btn-secondary" onClick={handleGitHubLogin}>GitHub</button>
-            </div> 
+            <div className="px-5">
             <p>
-              Do not have an account?{" "}
+              <small>Do not have an account?{" "}</small>
               <Link to="/register" className="hover:text-blue-500">
-                Register
+                <small>Register</small>
               </Link>
             </p>
+            </div>
+            
+            
+            </div> 
+            
           </div>
         </div>
       </div>
