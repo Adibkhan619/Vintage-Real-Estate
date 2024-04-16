@@ -4,12 +4,12 @@ import { AuthContext } from "../providers/AuthProvider";
 
 const Profile = () => {
 
-    const {userPhoto} = useContext(AuthContext);
-    console.log(userPhoto); 
+    const {user} = useContext(AuthContext);
+     
 
     return (
         <div>
-            <img className="w-48" src={userPhoto} alt="" />
+            <img className="w-48" src={user.photoURL} alt="" />
             <h1>Its profile</h1>
         </div>
     );

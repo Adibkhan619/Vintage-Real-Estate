@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
-  const { logIn, googleLogin } = useContext(AuthContext);
+  const { logIn, googleLogin, githubLogin } = useContext(AuthContext);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -31,6 +31,15 @@ const Login = () => {
         console.log(error);
       });
   };
+  const handleGitHubLogin = () => {
+    githubLogin()
+    .then((result) => {
+      console.log(result.user, 'github working');
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  }
 
   return (
     <div>
@@ -52,6 +61,7 @@ const Login = () => {
                 <input
                   type="email"
                   name="email"
+                  autoComplete="email"
                   placeholder="email"
                   className="input input-bordered"
                   required
@@ -65,6 +75,7 @@ const Login = () => {
                 <input
                   type="password"
                   name="password"
+                  autoComplete="current-password"
                   placeholder="password"
                   className="input input-bordered"
                   required
@@ -81,10 +92,11 @@ const Login = () => {
                   Login
                 </button>
               </div>
-            </form>
+           </form>
             <div>
               <button className="btn btn-primary" onClick={handleGoogleLogin}>Google</button>
-            </div>
+              <button className="btn btn-secondary" onClick={handleGitHubLogin}>GitHub</button>
+            </div> 
             <p>
               Do not have an account?{" "}
               <Link to="/register" className="hover:text-blue-500">

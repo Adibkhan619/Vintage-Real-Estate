@@ -6,6 +6,7 @@ import Login from "../pages/Login";
 import Profile from "../pages/Profile";
 import UpdateProfile from "../pages/UpdateProfile";
 import SiteDetails from "../pages/SiteDetails";
+import PrivateRoutes from "../pages/PrivateRoutes";
 
 const router = createBrowserRouter([
     {
@@ -27,11 +28,11 @@ const router = createBrowserRouter([
         },
         {
           path: "/userProfile",
-          element: <Profile></Profile>
+          element: <PrivateRoutes><Profile></Profile></PrivateRoutes>
         },
         {
           path: "/updateProfile",
-          element: <UpdateProfile></UpdateProfile>
+          element: <PrivateRoutes><UpdateProfile></UpdateProfile></PrivateRoutes>
         },
         {
           path: "/siteDetails/:id",
