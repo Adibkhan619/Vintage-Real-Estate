@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 
-
-
 const SiteCard = ({ site }) => {
   const { id, category,img,site_title, description } = site;
   console.log(id, category);

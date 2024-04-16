@@ -7,6 +7,8 @@ import Profile from "../pages/Profile";
 import UpdateProfile from "../pages/UpdateProfile";
 import SiteDetails from "../pages/SiteDetails";
 import PrivateRoutes from "../pages/PrivateRoutes";
+import SiteCard from "../pages/SiteCard";
+import Estates from "../pages/Estates";
 
 const router = createBrowserRouter([
     {
@@ -16,7 +18,7 @@ const router = createBrowserRouter([
         {
             path: "/",
             element: <Home></Home>,
-            loader: () => fetch('/public/realEstates.json')
+            // loader: () => fetch('/public/realEstates.json')
         },
         {
             path: "/register",
@@ -33,6 +35,11 @@ const router = createBrowserRouter([
         {
           path: "/updateProfile",
           element: <PrivateRoutes><UpdateProfile></UpdateProfile></PrivateRoutes>
+        },
+        {
+          path:"/estates",
+          element:<PrivateRoutes><Estates></Estates></PrivateRoutes>,
+          loader: () => fetch('/public/realEstates.json')
         },
         {
           path: "/siteDetails/:id",

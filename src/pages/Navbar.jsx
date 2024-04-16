@@ -29,7 +29,7 @@ const Navbar = () => {
         <NavLink to="/userProfile">Profile</NavLink>
       </li>
       <li>
-        <NavLink to="/updateProfile">Update Profile</NavLink>
+        <NavLink to="/estates">Estates</NavLink>
       </li>
     </>
   );
