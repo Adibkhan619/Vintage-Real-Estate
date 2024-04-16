@@ -14,11 +14,11 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <NavLink to="/">Home</NavLink>
+        <NavLink  to="/">Home</NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink to="/about">About</NavLink>
-      </li>
+      </li> */}
       <li>
         <NavLink to="/register">Register</NavLink>
       </li>
@@ -35,7 +35,7 @@ const Navbar = () => {
   );
   return (
     <div className="flex justify-center">
-      <div className="navbar bg-base-100 shadow-lg">
+      <div className="navbar bg-base-100 bg-opacity-15 shadow-lg">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

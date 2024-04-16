@@ -25,10 +25,7 @@ const Profile = () => {
   return (
     <div>
       <div>
-        <div>
-          
-          <p>socreteses</p>
-        </div>
+       
         <div className="h-fit w-3/4 mx-auto rounded-3xl bg-base-200 ">
           
           <div className="p-16 border rounded-3xl flex lg:flex-row mx-auto items-center justify-center gap-20  ">

@@ -50,38 +50,38 @@ const Register = () => {
               <img className="hero-overlay h-[600px] rounded-3xl opacity-50" src="https://i.postimg.cc/sx5N613D/banner-final.jpg" alt="" />
   <div className="hero-content px-16 lg:gap-10 flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
-      <h1 className="text-5xl text-white font-bold">Register Now!</h1>
-      <p className="py-6 text-white">Unlock the gateway to unparalleled industrial opportunities by registering now on our website. Gain exclusive access to a diverse array of industrial complexes, from cutting-edge factories to state-of-the-art power plants.</p>
+      <h1 className="text-5xl text-orange-400 py-5 font-bold">Register Now!</h1>
+      <p className="p-6 rounded-lg bg-violet-950 bg-opacity-40 text-orange-400">Unlock the gateway to unparalleled industrial opportunities by registering now on our website. Gain exclusive access to a diverse array of industrial complexes, from cutting-edge factories to state-of-the-art power plants.</p>
     </div>
-    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-opacity-60 bg-orange-300">
       <form onSubmit={handleRegister} className="card-body">
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Name</span>
+            <span className="label-text font-semibold text-lg">Name</span>
           </label>
-          <input type="text" name="name" placeholder="Name" className="input input-bordered" required />
+          <input type="text" name="name" placeholder="Name" className="input input-bordered   " required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Email</span>
+            <span className="label-text font-semibold text-lg">Email</span>
           </label>
-          <input type="email" name="email" placeholder="email" className="input input-bordered" required />
+          <input type="email" name="email" placeholder="email" className="input input-bordered  " required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Photo url</span>
+            <span className="label-text font-semibold text-lg">Photo url</span>
           </label>
-          <input type="text" name="photo" placeholder="Photo url" className="input input-bordered" />
+          <input type="text" name="photo" placeholder="Photo url" className="input input-bordered  " />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text">Password</span>
+            <span className="label-text font-semibold text-lg">Password</span>
           </label>
-          <input type="password" name="password" placeholder="password" className="input input-bordered" required />
+          <input  type="password" name="password" placeholder="password" className="input input-bordered " required />
           <small className="text-red-600">{error}</small>
         </div>
         <div className="form-control mt-6">
-            <button type="submit" className="btn btn-primary w-full">Register</button>
+            <button type="submit" className="btn border-2 text-white text-lg bg-indigo-900 w-full">Register</button>
             
         </div>
         <p>
