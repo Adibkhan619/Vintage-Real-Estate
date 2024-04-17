@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css";
@@ -10,8 +11,15 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { Pagination } from "swiper/modules";
 import "animate.css";
+import { useEffect } from "react";
 
 const Home = () => {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
+
   return (
     <div className="">
       <Helmet>
@@ -26,10 +34,10 @@ const Home = () => {
 
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h1 className=" lg:text-5xl text-yellow-200 font-bold animate__bounceIn animate__animated">
+            <h1 className=" lg:text-5xl my-2 text-yellow-200 font-bold animate__bounceIn animate__animated">
               Welcome Home to Your Real Estate Journey!
             </h1>
-            <p className=" text-yellow-200">
+            <p className="font-medium text-lg text-yellow-200">
               Discover the perfect place to call home with our comprehensive
               real estate platform. Whether you are buying, selling, or simply
               exploring, we are here to guide you every step of the way. Start
@@ -41,7 +49,7 @@ const Home = () => {
       </div>
 
       <div className="my-8 ">
-        <h1 className="lg:text-4xl my-5 md:text-2xl font-bold text-center lg:py-8 lg:my-8 text-gray-700 bg-yellow-100 lg:rounded-xl">
+        <h1 data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="lg:text-4xl my-5 md:text-2xl font-bold text-center lg:py-8 lg:my-8 text-gray-700 bg-yellow-100 lg:rounded-xl">
           Explore Your Dream Spaces
         </h1>
         <Swiper
@@ -99,6 +107,10 @@ const Home = () => {
           </SwiperSlide>
         </Swiper>
       </div>
+
+      {/* <div >
+        <h1 data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="text-7xl">hola</h1>
+      </div> */}
     </div>
   );
 };
