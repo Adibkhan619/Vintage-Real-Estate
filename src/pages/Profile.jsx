@@ -66,8 +66,7 @@ const Profile = () => {
                     name="photo"
                     className="input input-bordered"
                     required
-                  />
-                 
+                  />                
                 </div>
                 <div className="form-control mt-6">
                   <button type="submit" className="btn border-none text-lg text-gray-700 bg-orange-400">Update Profile</button>

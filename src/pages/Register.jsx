@@ -59,7 +59,7 @@ const Register = () => {
       <div className="lg:hero md:hero lg:max-w-7xl rounded-3xl mx-auto lg:h-[630px]  lg:bg-gray-700">
         <img
           className="lg:hero-overlay lg:h-[630px] px-3 lg:px-0 rounded-3xl lg:opacity-50"
-          src="https://i.postimg.cc/sx5N613D/banner-final.jpg"
+          src="https://i.postimg.cc/k5cY4ZqG/banner5.jpg"
           alt=""
         />
         <div className="lg:hero-content px-5 lg:px-16 lg:gap-10 flex-col lg:flex-row-reverse">

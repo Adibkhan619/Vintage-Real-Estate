@@ -17,15 +17,15 @@ const SiteDetails = () => {
       <Helmet>
         <title>{site_title}</title>
       </Helmet>
-      <div className=" rounded-3xl my-8 bg-base-200">
-        <div className="flex gap-8 md:flex-col lg:flex-row p-8">
+      <div className=" rounded-3xl lg:my-8 bg-base-200">
+        <div className="flex-col flex gap-8 md:flex-col lg:flex-row p-5  lg:p-8">
           <img
             src={img}
-            className="max-w-[700px] rounded-lg shadow-2xl"
+            className="lg:max-w-[700px] rounded-lg shadow-2xl"
           />
           <div>
-            <h1 className="text-5xl font-bold">{site_title}</h1> 
-            <h2 className="text-3xl font-semibold">{price}</h2> 
+            <h1 className="text-5xl my-2 font-bold">{site_title}</h1> 
+            <h2 className="text-3xl my-2 font-semibold">{price}</h2> 
 
            
              <h1 className="font-bold bg-yellow-300 rounded-r-3xl py-2 px-4">{segment_name}</h1>  
@@ -43,7 +43,7 @@ const SiteDetails = () => {
            
 
 
-            <div className="flex gap-4 mb-4">
+            <div className="lg:flex-row flex-col space-y-2 gap-4 mb-4">
               <p className="bg-red-500 px-4 py-2 text-white font-semibold rounded-lg ">{facilities[0]}</p>
               <p className="bg-green-500 px-4 py-2 text-white font-semibold rounded-lg ">{facilities[1]}</p>
               <p className="bg-orange-500 px-4 py-2 text-white font-semibold rounded-lg ">{facilities[2]}</p>

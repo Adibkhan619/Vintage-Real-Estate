@@ -36,12 +36,12 @@ const router = createBrowserRouter([
         {
           path:"/estates",
           element:<PrivateRoutes><Estates></Estates></PrivateRoutes>,
-          loader: () => fetch('/public/realEstates.json')
+          loader: () => fetch('/realEstates.json')
         },
         {
           path: "/siteDetails/:id",
           element: <SiteDetails></SiteDetails>,
-          loader: () => fetch('/public/realEstates.json'),
+          loader: () => fetch('/realEstates.json'),
         },
         {
           path:"/blog",

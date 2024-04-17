@@ -52,7 +52,7 @@ const Login = () => {
         <title>Login</title>
       </Helmet>
         <div className="lg:hero lg:max-w-7xl rounded-3xl mx-auto lg:h-[600px] lg:bg-gray-900">
-              <img className="lg:hero-overlay lg:h-[600px] rounded-3xl p-3 lg:p-0 lg:opacity-70" src="https://i.postimg.cc/sx5N613D/banner-final.jpg" alt="" />
+              <img className="lg:hero-overlay lg:h-[600px] rounded-3xl p-3 lg:p-0 lg:opacity-70" src="https://i.postimg.cc/5t1kf1cD/banner1.jpg" alt="" />
   <div className="lg:hero-content lg:px-16 lg:gap-10 flex-col-reverse lg:flex-row-reverse">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl lg:text-yellow-200 text-gray-800 py-5 font-bold animate__bounceIn animate__animated">Login Now!</h1>
