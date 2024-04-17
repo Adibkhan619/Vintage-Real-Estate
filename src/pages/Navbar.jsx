@@ -14,23 +14,23 @@ const Navbar = () => {
   const navLinks = (
     <>
       <li>
-        <NavLink  to="/">Home</NavLink>
+        <NavLink className="text-lg font-medium text-gray-700"  to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/blog">Blog</NavLink>
+        <NavLink className="text-lg font-medium text-gray-700" to="/blog">Blog</NavLink>
       </li>
       
         <li>
-        <NavLink to="/estates">Estates</NavLink>
+        <NavLink className="text-lg font-medium text-gray-700" to="/estates">Estates</NavLink>
       </li>
       <li>
-        <NavLink to="/register">Register</NavLink>
+        <NavLink className="text-lg font-medium text-gray-700" to="/register">Register</NavLink>
       </li>
       <li>
-        <NavLink to="/login">Login</NavLink>
+        <NavLink className="text-lg font-medium text-gray-700" to="/login">Login</NavLink>
       </li>
       <li>
-        <NavLink to="/userProfile">Profile</NavLink>
+        <NavLink className="text-lg font-medium text-gray-700" to="/userProfile">Profile</NavLink>
       </li>
       
     </>
@@ -82,12 +82,12 @@ const Navbar = () => {
          </div>
           <div>
           {user ? (
-            <button onClick={handleSignOut} className="btn hidden md:block lg:block">
+            <button onClick={handleSignOut} className="btn bg-amber-200 lg:text-lg font-semibold text-gray-700 hidden md:block lg:block">
               Sign Out
             </button>
           ) : (
             <NavLink to="/login">
-              <button className="btn">Login</button>
+              <button className="btn bg-amber-200 lg:text-lg font-semibold text-gray-700">Login</button>
             </NavLink>
           )}
           </div>

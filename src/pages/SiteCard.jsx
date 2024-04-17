@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import 'animate.css'
 
 const SiteCard = ({ site }) => {
   const { id, category,img,site_title, description, segment_name, total_area } = site;
@@ -6,14 +7,14 @@ const SiteCard = ({ site }) => {
   
   return (
     <div>
-      <div className="card lg:w-96 mx-5 bg-base-100 shadow-xl" >
+      <div className="card animate__fadeInDown animate__animated lg:w-96 mx-5 bg-base-100 shadow-xl" >
         <figure>
           <img
             src={img}
             alt=""
           />
         </figure>
-        <div className="card-body">
+        <div className="card-body  bg-amber-100 rounded-3xl">
           <h2 className="card-title font-bold text-gray-700 text-2xl">{site_title}</h2>
           <p className="text-gray-600 font-semibold">{segment_name}</p>
           <p className="text-gray-600 font-semibold">{total_area}</p>

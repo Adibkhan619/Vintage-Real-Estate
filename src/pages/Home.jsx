@@ -10,7 +10,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
-
+import 'animate.css'
 
 const Home = () => {
   return (
@@ -25,7 +25,7 @@ const Home = () => {
   
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
-      <h1 className=" lg:text-5xl text-yellow-200 font-bold">Welcome Home to Your Real Estate Journey!</h1>
+      <h1 className=" lg:text-5xl text-yellow-200 font-bold animate__bounceIn animate__animated">Welcome Home to Your Real Estate Journey!</h1>
       <p className=" text-yellow-200">Discover the perfect place to call home with our comprehensive real estate platform. Whether you're buying, selling, or simply exploring, we're here to guide you every step of the way. Start your journey today!</p>
       {/* <button className="btn btn-primary">Get Started</button> */}
     </div>

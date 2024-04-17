@@ -52,13 +52,13 @@ const Login = () => {
         <title>Login</title>
       </Helmet>
         <div className="lg:hero lg:max-w-7xl rounded-3xl mx-auto lg:h-[600px] lg:bg-gray-900">
-              <img className="lg:hero-overlay lg:h-[600px] rounded-3xl p-3 lg:opacity-70" src="https://i.postimg.cc/sx5N613D/banner-final.jpg" alt="" />
+              <img className="lg:hero-overlay lg:h-[600px] rounded-3xl p-3 lg:p-0 lg:opacity-70" src="https://i.postimg.cc/sx5N613D/banner-final.jpg" alt="" />
   <div className="lg:hero-content lg:px-16 lg:gap-10 flex-col-reverse lg:flex-row-reverse">
     <div className="text-center lg:text-left">
       <h1 className="text-5xl lg:text-yellow-200 text-gray-800 py-5 font-bold animate__bounceIn animate__animated">Login Now!</h1>
-      <p className="p-6 mx-5 rounded-lg  font-semibold bg-orange-100 bg-opacity-70 text-gray-700">Unlock the gateway to unparalleled industrial opportunities by registering now on our website. Gain exclusive access to a diverse array of industrial complexes, from cutting-edge factories to state-of-the-art power plants.</p>
+      <p className="p-6 mx-5 lg:mx-0 rounded-lg  font-semibold bg-orange-100 bg-opacity-70 text-gray-700">Unlock the gateway to unparalleled industrial opportunities by registering now on our website. Gain exclusive access to a diverse array of industrial complexes, from cutting-edge factories to state-of-the-art power plants.</p>
     </div>
-          <div className="card shrink-0 lg:w-full m-5 max-w-sm shadow-2xl lg:bg-opacity-85  bg-yellow-200 animate__fadeInDown animate__animated">
+          <div className="card shrink-0 lg:w-full m-5 max-w-sm shadow-2xl lg:bg-opacity-90  bg-amber-200 animate__fadeInDown animate__animated">
             <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -66,7 +66,7 @@ const Login = () => {
                 </label>
                 <input
                   type="email"
-                  name="email"
+                  name="email"s
                   autoComplete="email"
                   placeholder="email"
                   className="input input-bordered"

@@ -56,9 +56,9 @@ const Register = () => {
       <Helmet>
         <title>Register</title>
       </Helmet>
-      <div className="lg:hero md:hero lg:max-w-7xl rounded-3xl mx-auto lg:h-[600px]  lg:bg-gray-700">
+      <div className="lg:hero md:hero lg:max-w-7xl rounded-3xl mx-auto lg:h-[630px]  lg:bg-gray-700">
         <img
-          className="lg:hero-overlay lg:h-[600px] px-3 rounded-3xl lg:opacity-50"
+          className="lg:hero-overlay lg:h-[630px] px-3 lg:px-0 rounded-3xl lg:opacity-50"
           src="https://i.postimg.cc/sx5N613D/banner-final.jpg"
           alt=""
         />
@@ -71,7 +71,7 @@ const Register = () => {
             Join our community of homebuyers and sellers to access personalized property recommendations, exclusive deals, and expert advice. Start your real estate journey now by signing up below.
             </p>
           </div>
-          <div className="card mt-5 shrink-0 w-full max-w-sm shadow-2xl bg-opacity-85 bg-yellow-200 animate__fadeInDown animate__animated">
+          <div className="card mt-5 shrink-0 w-full max-w-sm shadow-2xl bg-opacity-85 bg-amber-200 animate__fadeInDown animate__animated">
             <form onSubmit={handleRegister} className="card-body ">
               <div className="form-control">
                 <label className="label">
