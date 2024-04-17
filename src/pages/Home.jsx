@@ -58,9 +58,6 @@ const Home = () => {
           spaceBetween={50}
           slidesPerView={3}
           pagination={{ clickable: true }}
-          // scrollbar={{ draggable: true }}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
         >
           <SwiperSlide>
             <img

@@ -53,7 +53,7 @@ const Profile = () => {
                     placeholder={user.displayName}
                     name="name"
                     className="input input-bordered"
-                    required
+                    
                   />
                 </div>
                 <div className="form-control">
@@ -65,7 +65,7 @@ const Profile = () => {
                     placeholder={user.photoURL}
                     name="photo"
                     className="input input-bordered"
-                    required
+                    
                   />                
                 </div>
                 <div className="form-control mt-6">

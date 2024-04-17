@@ -11,8 +11,7 @@ const SiteCard = ({ site }) => {
     AOS.init();
   }, [])
 
-  const { id, category, img, site_title, segment_name, total_area } = site;
-  console.log(id, category);
+  const { id,  img, site_title, segment_name, total_area } = site;
 
   return (
     
