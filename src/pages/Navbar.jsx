@@ -16,9 +16,13 @@ const Navbar = () => {
       <li>
         <NavLink  to="/">Home</NavLink>
       </li>
-      {/* <li>
-        <NavLink to="/about">About</NavLink>
-      </li> */}
+      <li>
+        <NavLink to="/blog">Blog</NavLink>
+      </li>
+      
+        <li>
+        <NavLink to="/estates">Estates</NavLink>
+      </li>
       <li>
         <NavLink to="/register">Register</NavLink>
       </li>
@@ -28,14 +32,12 @@ const Navbar = () => {
       <li>
         <NavLink to="/userProfile">Profile</NavLink>
       </li>
-      <li>
-        <NavLink to="/estates">Estates</NavLink>
-      </li>
+      
     </>
   );
   return (
     <div className="flex justify-center">
-      <div className="navbar bg-base-100 bg-opacity-15 shadow-lg">
+      <div className="navbar lg:px-24 bg-base-100 bg-opacity-15 shadow-lg">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -64,16 +66,19 @@ const Navbar = () => {
           <a className="btn btn-ghost text-xl">daisyUI</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{navLinks}</ul>
+          <ul className="menu menu-horizontal px-1">
+            {navLinks}
+            </ul>
         </div>
         <div className="navbar-end flex gap-2">
          <div>
-         {user && (
+         {user ? (
             <div className="flex items-center gap-2">
               <img className="w-10 h-10 border rounded-full" title={user.displayName} src={user.photoURL} alt="" />
               <p>{user.email}</p>
-            </div>
-          )}
+            </div>) :
+            <img className="w-18 h-12" src="/icon/user.png"/>
+          }
          </div>
           <div>
           {user ? (

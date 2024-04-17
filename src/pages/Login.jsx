@@ -3,6 +3,8 @@ import { AuthContext } from "../providers/AuthProvider";
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet";
+import 'animate.css'
 
 const Login = () => {
   const { logIn, googleLogin, githubLogin } = useContext(AuthContext);
@@ -43,14 +45,17 @@ const Login = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Login</title>
+      </Helmet>
         <div className="hero max-w-7xl rounded-3xl mx-auto h-[600px]  bg-gray-900">
               <img className="hero-overlay h-[600px] rounded-3xl opacity-70" src="https://i.postimg.cc/sx5N613D/banner-final.jpg" alt="" />
   <div className="hero-content px-16 lg:gap-10 flex-col lg:flex-row-reverse">
     <div className="text-center lg:text-left">
-      <h1 className="text-5xl text-white font-bold">Register Now!</h1>
+      <h1 className="text-5xl text-white font-bold animate__bounceIn animate__animated">Login Now!</h1>
       <p className="py-6 text-white">Unlock the gateway to unparalleled industrial opportunities by registering now on our website. Gain exclusive access to a diverse array of industrial complexes, from cutting-edge factories to state-of-the-art power plants.</p>
     </div>
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 animate__fadeInDown animate__animated">
             <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">
                 <label className="label">

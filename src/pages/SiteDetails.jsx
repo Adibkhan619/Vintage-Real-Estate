@@ -1,6 +1,10 @@
+
+import { Helmet } from "react-helmet";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const SiteDetails = () => {
+
+ 
 
     const {id} = useParams();
     const sites= useLoaderData();
@@ -10,6 +14,9 @@ const SiteDetails = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>{site_title}</title>
+      </Helmet>
       <div className=" rounded-3xl my-8 bg-base-200">
         <div className="flex gap-8 md:flex-col lg:flex-row p-8">
           <img

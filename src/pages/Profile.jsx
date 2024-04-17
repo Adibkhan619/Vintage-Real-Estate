@@ -1,9 +1,13 @@
-import { useContext } from "react";
+
 import { AuthContext } from "../providers/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import 'animate.css';
+import { Helmet } from "react-helmet";
+import { useContext } from "react";
+import 'animate.css'
 
 const Profile = () => {
+
   const { user } = useContext(AuthContext);
   // const [name, setName] = useState();
 
@@ -25,7 +29,9 @@ const Profile = () => {
   return (
     <div>
       <div>
-       
+      <Helmet>
+        <title>Profile | {user.displayName}</title>
+      </Helmet>
         <div className="h-fit w-3/4 mx-auto rounded-3xl bg-base-200 ">
           
           <div className="p-16 border rounded-3xl flex lg:flex-row mx-auto items-center justify-center gap-20  ">
@@ -36,7 +42,7 @@ const Profile = () => {
               
 {/*  */}
             </div>
-            <div className="card w-full max-w-sm shadow-2xl bg-base-100">
+            <div className="card w-full max-w-sm shadow-2xl bg-base-100 animate__flipInX animate__animated">
               <form onSubmit={handleUpdate} className="card-body">
                 <div className="form-control">
                   <label className="label">

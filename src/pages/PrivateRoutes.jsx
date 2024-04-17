@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { Navigate } from "react-router-dom";
-
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 
 const PrivateRoutes = ({children}) => {
     const {user, loading} = useContext(AuthContext);
@@ -11,9 +12,15 @@ const PrivateRoutes = ({children}) => {
     if(user){
         return children;
     }
+    // else{
+    //     toast("Please login first") 
+        
+    // }
     return (
         <Navigate to="/login"></Navigate>
+        
     );
+   
 };
 
 export default PrivateRoutes;
