@@ -6,7 +6,7 @@ const SiteCard = ({ site }) => {
   
   return (
     <div>
-      <div className="card w-96 bg-base-100 shadow-xl" >
+      <div className="card lg:w-96 mx-5 bg-base-100 shadow-xl" >
         <figure>
           <img
             src={img}

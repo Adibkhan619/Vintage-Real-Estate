@@ -75,14 +75,14 @@ const Navbar = () => {
          {user ? (
             <div className="flex items-center gap-2">
               <img className="w-10 h-10 border rounded-full" title={user.displayName} src={user.photoURL} alt="" />
-              <p>{user.email}</p>
+              <p className="hidden md:block lg:block">{user.email}</p>
             </div>) :
             <img className="w-18 h-12" src="/icon/user.png"/>
           }
          </div>
           <div>
           {user ? (
-            <button onClick={handleSignOut} className="btn">
+            <button onClick={handleSignOut} className="btn hidden md:block lg:block">
               Sign Out
             </button>
           ) : (

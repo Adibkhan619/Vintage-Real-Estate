@@ -6,14 +6,13 @@ import { updateProfile } from "firebase/auth";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import 'animate.css'
+import { IoMdEye } from "react-icons/io";
 
 const Register = () => {
-  // useEffect(() => {
-  //   document.title = "Register";
-  // }, []);
 
   const { createUser } = useContext(AuthContext);
   const [error, setError] = useState();
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -57,25 +56,22 @@ const Register = () => {
       <Helmet>
         <title>Register</title>
       </Helmet>
-      <div className="hero max-w-7xl rounded-3xl mx-auto h-[600px]  bg-gray-700">
+      <div className="lg:hero md:hero lg:max-w-7xl rounded-3xl mx-auto lg:h-[600px]  lg:bg-gray-700">
         <img
-          className="hero-overlay h-[600px] rounded-3xl opacity-50"
+          className="lg:hero-overlay lg:h-[600px] px-3 rounded-3xl lg:opacity-50"
           src="https://i.postimg.cc/sx5N613D/banner-final.jpg"
           alt=""
         />
-        <div className="hero-content px-16 lg:gap-10 flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left">
-            <h1 className="text-5xl text-orange-400 py-5 font-bold animate__bounceIn animate__animated">
-              Register Now!
+        <div className="lg:hero-content px-5 lg:px-16 lg:gap-10 flex-col lg:flex-row-reverse">
+          <div className="text-center space-y-3 lg:text-left">
+            <h1 className="text-5xl md:text-yellow-200 text-gray-700 lg:text-yellow-200 py-5 font-bold animate__bounceIn animate__animated">
+            Unlock Exclusive Benefits! Register Today.
             </h1>
-            <p className="p-6 rounded-lg bg-violet-950 bg-opacity-40 text-orange-400">
-              Unlock the gateway to unparalleled industrial opportunities by
-              registering now on our website. Gain exclusive access to a diverse
-              array of industrial complexes, from cutting-edge factories to
-              state-of-the-art power plants.
+            <p className="p-6 rounded-lg font-semibold bg-orange-100 bg-opacity-70 text-gray-700">
+            Join our community of homebuyers and sellers to access personalized property recommendations, exclusive deals, and expert advice. Start your real estate journey now by signing up below.
             </p>
           </div>
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-opacity-60 bg-orange-300 animate__fadeInDown animate__animated">
+          <div className="card mt-5 shrink-0 w-full max-w-sm shadow-2xl bg-opacity-85 bg-yellow-200 animate__fadeInDown animate__animated">
             <form onSubmit={handleRegister} className="card-body ">
               <div className="form-control">
                 <label className="label">
@@ -122,22 +118,27 @@ const Register = () => {
                     Password
                   </span>
                 </label>
-                <input
-                  type="password"
+                <div className="inline-flex">
+                   <input
+                  type={showPassword ? "text" : "password"}
                   name="password"
                   placeholder="password"
-                  className="input input-bordered "
+                  className="input w-full  input-bordered"
                   required
                 />
+                <span className="relative text-lg right-7 top-4 text-gray-400" onClick={() => setShowPassword (!showPassword)}><IoMdEye /></span>
+                </div>
+               
                 <small className="text-red-600">{error}</small>
               </div>
               <div className="form-control mt-6">
                 <button
                   type="submit"
-                  className="btn border-2 text-white text-lg bg-indigo-900 w-full"
+                  className="btn font-bold text-gray-800 text-lg bg-orange-500 w-full "
                 >
                   Register
                 </button>
+                
               </div>
               <p>
                 <small>Already have an account? </small>

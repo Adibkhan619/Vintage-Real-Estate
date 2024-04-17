@@ -7,7 +7,7 @@ const Estates = () => {
   const realEstates = useLoaderData();
   console.log(realEstates);
   return (
-    <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-rows-1 gap-5 ">
+    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-rows-1 gap-5 ">
       <Helmet>
         <title>Estates</title>
       </Helmet>

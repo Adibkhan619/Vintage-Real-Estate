@@ -1,13 +1,16 @@
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { Link } from "react-router-dom";
+import {  useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from "react-helmet";
 import 'animate.css'
+import { IoMdEye } from "react-icons/io";
 
 const Login = () => {
   const { logIn, googleLogin, githubLogin } = useContext(AuthContext);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -48,18 +51,18 @@ const Login = () => {
       <Helmet>
         <title>Login</title>
       </Helmet>
-        <div className="hero max-w-7xl rounded-3xl mx-auto h-[600px]  bg-gray-900">
-              <img className="hero-overlay h-[600px] rounded-3xl opacity-70" src="https://i.postimg.cc/sx5N613D/banner-final.jpg" alt="" />
-  <div className="hero-content px-16 lg:gap-10 flex-col lg:flex-row-reverse">
+        <div className="lg:hero lg:max-w-7xl rounded-3xl mx-auto lg:h-[600px] lg:bg-gray-900">
+              <img className="lg:hero-overlay lg:h-[600px] rounded-3xl p-3 lg:opacity-70" src="https://i.postimg.cc/sx5N613D/banner-final.jpg" alt="" />
+  <div className="lg:hero-content lg:px-16 lg:gap-10 flex-col-reverse lg:flex-row-reverse">
     <div className="text-center lg:text-left">
-      <h1 className="text-5xl text-white font-bold animate__bounceIn animate__animated">Login Now!</h1>
-      <p className="py-6 text-white">Unlock the gateway to unparalleled industrial opportunities by registering now on our website. Gain exclusive access to a diverse array of industrial complexes, from cutting-edge factories to state-of-the-art power plants.</p>
+      <h1 className="text-5xl lg:text-yellow-200 text-gray-800 py-5 font-bold animate__bounceIn animate__animated">Login Now!</h1>
+      <p className="p-6 mx-5 rounded-lg  font-semibold bg-orange-100 bg-opacity-70 text-gray-700">Unlock the gateway to unparalleled industrial opportunities by registering now on our website. Gain exclusive access to a diverse array of industrial complexes, from cutting-edge factories to state-of-the-art power plants.</p>
     </div>
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 animate__fadeInDown animate__animated">
+          <div className="card shrink-0 lg:w-full m-5 max-w-sm shadow-2xl lg:bg-opacity-85  bg-yellow-200 animate__fadeInDown animate__animated">
             <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  <span className="label-text font-semibold text-lg">Email</span>
                 </label>
                 <input
                   type="email"
@@ -73,38 +76,27 @@ const Login = () => {
 
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  <span className="label-text font-semibold text-lg">Password</span>
                 </label>
-                <input
-                  type="password"
+                <div className="inline-flex">
+                   <input
+                  type={showPassword ? "text" : "password"}
                   name="password"
-                  autoComplete="current-password"
                   placeholder="password"
-                  className="input input-bordered"
+                  className="input w-full  input-bordered"
                   required
-                />                
+                />
+                <span className="relative text-lg right-7 top-4 text-gray-400" onClick={() => setShowPassword (!showPassword)}><IoMdEye /></span>
+                </div>               
               </div>
 
               <div className="form-control mt-6">
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn font-bold text-gray-800 text-lg bg-orange-500 w-full ">
                   Login
                 </button>
               </div>
            </form>
-            {/* <div className="px-8 mb-8">
-              <button className="btn btn-primary" onClick={handleGoogleLogin}>Google</button>
-              <button className="btn btn-secondary" onClick={handleGitHubLogin}>GitHub</button>
-            <div className="px-5">
-            <p>
-              <small>Do not have an account?{" "}</small>
-              <Link to="/register" className="hover:text-blue-600">
-                <small>Register</small>
-              </Link>
-            </p>
-            </div>
-            
-            
-            </div>  */}
+           
 
 <div className="flex items-center px-4 py-1 space-x-1">
 		<div className="flex-1  h-px sm:w-16 dark:bg-gray-300"></div>
