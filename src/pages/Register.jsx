@@ -134,7 +134,7 @@ const Register = () => {
               <div className="form-control mt-6">
                 <button
                   type="submit"
-                  className="btn font-bold text-gray-800 text-lg bg-orange-500 w-full "
+                  className="btn border-none font-bold text-gray-800 text-lg bg-orange-500 w-full "
                 >
                   Register
                 </button>

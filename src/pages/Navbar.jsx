@@ -63,7 +63,7 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn btn-ghost text-gray-700 font-semibold text-2xl">Vintage Real Estate</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -82,12 +82,12 @@ const Navbar = () => {
          </div>
           <div>
           {user ? (
-            <button onClick={handleSignOut} className="btn bg-amber-200 lg:text-lg font-semibold text-gray-700 hidden md:block lg:block">
+            <button onClick={handleSignOut} className="btn border-none bg-amber-200 lg:text-lg font-semibold text-gray-700 hidden md:block lg:block">
               Sign Out
             </button>
           ) : (
             <NavLink to="/login">
-              <button className="btn bg-amber-200 lg:text-lg font-semibold text-gray-700">Login</button>
+              <button className="btn border-none bg-amber-200 lg:text-lg font-semibold text-gray-700">Login</button>
             </NavLink>
           )}
           </div>

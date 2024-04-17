@@ -10,7 +10,7 @@ const SiteDetails = () => {
     const sites= useLoaderData();
     console.log(sites); 
     const site =  sites.find((item) => item.id == id);
-    const { category, segment_name, price, status, total_area, img, site_title, description, location, facilities  } = site;
+    const {  segment_name, price, status, total_area, img, site_title, description, location, facilities  } = site;
 
   return (
     <div>

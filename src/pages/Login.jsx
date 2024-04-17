@@ -66,7 +66,7 @@ const Login = () => {
                 </label>
                 <input
                   type="email"
-                  name="email"s
+                  name="email"
                   autoComplete="email"
                   placeholder="email"
                   className="input input-bordered"
@@ -91,7 +91,7 @@ const Login = () => {
               </div>
 
               <div className="form-control mt-6">
-                <button type="submit" className="btn font-bold text-gray-800 text-lg bg-orange-500 w-full ">
+                <button type="submit" className="btn border-none font-bold text-gray-800 text-lg bg-orange-500 w-full ">
                   Login
                 </button>
               </div>

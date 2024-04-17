@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import 'animate.css'
+import PropTypes from 'prop-types';
 
 const SiteCard = ({ site }) => {
-  const { id, category,img,site_title, description, segment_name, total_area } = site;
+  const { id, category,img,  site_title, segment_name, total_area } = site;
   console.log(id, category);
   
   return (
@@ -29,7 +30,9 @@ const SiteCard = ({ site }) => {
     </div>
   );
 };
-
+SiteCard.propTypes = {
+  site : PropTypes.any
+}
 
 
 export default SiteCard;
